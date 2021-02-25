@@ -1,17 +1,39 @@
 .lightgray {
-    background-color: lightgray;
-    border-radius: 25px;
-    padding: 10px;
-    width: 50px;
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  width: 75px;
+  border: none;
+  font-size: 1.3rem;
+}
 
+.lightgray:hover {
+  background-color: gray;
+  cursor: pointer;
 }
-.equalsign {
-    background-color: lightblue;
-    border-radius: 25px;
-    padding: 10px;
-    width: 50px;
-    
+
+.lightblue {
+  background-color: rgb(210, 241, 252);
+  border-radius: 5px;
+  padding: 10px;
+  width: 75px;
+  border: none;
+  font-size: 1.3rem;
 }
-button:hover {
-    background-color:white;
+
+.lightblue:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.display {
+  padding: 10px 0;
+  font-size: 1.5rem;
+  text-align: right;
+}
+.calculator-buttons > * {
+  margin: 10px 0;
+}
+.btn-row > * {
+  margin: 0 10px;
 }

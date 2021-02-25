@@ -4,62 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Standard Calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Scientific Calculator</title>
 </head>
 <body>
     <a href="standard.html">standard</a>
     <a href="scientific.html">scientific</a>
-    <div class="calculator">
-        <input type="number" id="calcfield" value="0">
-        <div class="calculator-buttons">
-        <div class="toprow">
-            <button>Rad</buttons>
-                <button>Deg</buttons>
-                <button>X!</buttons>
-                <button>(</buttons>
-                <button>)</buttons>
-                <button>%</buttons>
-                <button>AC</buttons>
-                </div>
-                <div>
-                    <button>Inv</buttons>
-                    <button>Sin</buttons>
-                    <button>ln</buttons>
-                    <button>7</buttons>
-                    <button>8</buttons>
-                    <button>9</buttons>
-                    <button>/</buttons>
-                </div>
-                <div>
-                    <button>&#8719</buttons>
-                    <button>Cos</buttons>
-                    <button>log</buttons>
-                    <button>4</buttons>
-                    <button>5</buttons>
-                    <button>6</buttons>
-                    <button>*</buttons>
-                </div>
-                <div>
-                    <button>e</buttons>
-                    <button>tan</buttons>
-                    <button>&#8730</buttons>
-                    <button>1</buttons>
-                    <button>2</buttons>
-                    <button>3</buttons>
-                    <button>-</buttons>
-                </div>
-                <div>
-                    <button>Ans</buttons>
-                    <button>EXP</buttons>
-                    <button> x&#178</buttons>
-                    <button>0</buttons>
-                    <button>.</buttons>
-                    <button>-</buttons>
-                    <button>+</buttons>
-                </div>
-        
-        <div>
-            
+    <form>
+        <div class="calculator">
+            <input id="display" class="display" name="display" value="0" size="28" maxlength="25">
+            <div class="calculator-buttons">
+            <div class="btn-row">
+                <input type="button" class="lightgray" name="btnMath" value="(" onclick="addChar(this.form.display, '(')">
+                <input type="button" class="lightgray" name="btnMath" value="(" onclick="addChar(this.form.display, '(')">
+                <input type="button" class="lightgray" name="btnMath" value="(" onclick="addChar(this.form.display, '(')">
+                
+                <input type="button" class="lightgray" name="btnMath" value="(" onclick="addChar(this.form.display, '(')">
+                <input type="button" class="btnMath lightgray " name="btnMath" value=")" onclick="addChar(this.form.display,')')">
+                <input type="button" class="btnMath lightgray" name="btnMath" value="%" onclick=" percent(this.form.display)">
+            <input type="button" class="btnTop lightgray" name="btnTop" value="AC" onclick="this.form.display.value= 0 ">
+            </div>
+            <div class="btn-row">
+                <input type="button" class="btnNum lightblue" name="btnNum" value="7" onclick="addChar(this.form.display, '7')">
+                <input type="button" class="btnNum lightblue" name="btnNum" value="8" onclick="addChar(this.form.display, '8')">
+                <input type="button" class="btnNum lightblue" name="btnNum" value="9" onclick="addChar(this.form.display, '9')">
+                <input type="button" class="btnMath lightgray" name="btnMath" value="/" onclick="addChar(this.form.display, '/')">
+            </div>
+            <div class="btn-row">
+                    <input type="button" class="btnNum lightblue" name="btnNum" value="4" onclick="addChar(this.form.display, '4')">
+                    <input type="button" class="btnNum lightblue" name="btnNum" value="5" onclick="addChar(this.form.display, '5')">
+                <input type="button" class="btnNum lightblue" name="btnNum" value="6" onclick="addChar(this.form.display, '6')">
+                <input type="button" class="btnMath lightgray" name="btnMath" value="X" onclick="addChar(this.form.display, '*')">
+            </div>
+            <div class="btn-row">
+                    <input type="button" class="btnNum lightblue" name="btnNum" value="1" onclick="addChar(this.form.display, '1')">
+                   <input type="button" class="btnNum lightblue" name="btnNum" value="2" onclick="addChar(this.form.display, '2')">
+                   <input type="button" class="btnNum lightblue" name="btnNum" value="3" onclick="addChar(this.form.display, '3')">
+                   <input type="button" class="btnMath lightgray" name="btnMath" value="-" onclick="addChar(this.form.display, '-')">
+            </div>
+            <div class="btn-row">
+                    <input type="button" class="btnNum lightblue" name="btnNum" value="0" onclick="addChar(this.form.display, '0')">
+                    <input type="button" class="btnMath lightgray" name="btnMath" value="&#46;" onclick="addChar(this.form.display, '&#46;')">
+                    <input type="button" class="btnTop lightgray" name="btnTop" value="=" onclick="if(checkNum(this.form.display.value)) { compute(this.form) }">
+                    <input type="button" class="btnMath lightgray" name="btnMath" value="+" onclick="addChar(this.form.display, '+')">
+            </div>  
+            </div>
+    </form>
             
 </body>
 </html>
