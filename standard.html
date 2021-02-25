@@ -8,11 +8,14 @@
     <script src="calc.js"></script>
     <title>Standard Calculator</title>
 </head>
-<body>
-    <a href="standard.html">standard</a>
-    <a href="scientific.html">scientific</a>
+<body >
+    <div class="calc-body">
+    <a class="selected" href="standard.html">Standard</a>
+    <a href="scientific.html">Scientific</a>
 <form>
     <div class="calculator">
+
+    <!-- We're using this element in our JavaScript using it's name-->
         <input id="display" class="display" name="display" value="0" size="28" maxlength="25">
         <div class="calculator-buttons">
         <div class="btn-row">
@@ -47,8 +50,7 @@
         </div>  
         </div>
     </form>
-        <script>
-         
-            </script>
+</div>
+
 </body>
 </html>
